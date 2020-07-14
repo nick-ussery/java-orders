@@ -17,6 +17,7 @@ public class Order
     private double ordamount;
     @Column(nullable = false)
     private double custcode;
+    private double advanceamount;
     private String orderdescription;
 
 
@@ -33,12 +34,24 @@ public class Order
     private Set<Payment> payments = new HashSet<>();
 
 
-    public Order(double ordamount,  Payment payments, double custcode, String orderdescription) {
+    public Order(double ordamount, double advanceamount, Customer customer, String orderdescription) {
         this.ordamount = ordamount;
-        this.custcode = custcode;
         this.orderdescription = orderdescription;
         this.customer = customer;
         this.payments = (Set<Payment>) payments;
+    }
+
+    public double getAdvanceamount() {
+        return advanceamount;
+    }
+
+    public void setAdvanceamount(double advanceamount) {
+        this.advanceamount = advanceamount;
+    }
+
+    public void addPayments(Payment payment)
+    {
+        this.payments.add(payment);
     }
 
     public Set<Payment> getPayments() {
