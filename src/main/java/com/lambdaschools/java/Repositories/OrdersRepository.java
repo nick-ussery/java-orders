@@ -1,10 +1,10 @@
-package assignment.orders.Repositories;
+package com.lambdaschools.java.Repositories;
 
-import assignment.orders.Views.OrderCounts;
+import com.lambdaschools.java.Views.OrderCounts;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import assignment.orders.models.Order;
+import com.lambdaschools.java.models.Order;
 
 import java.util.List;
 

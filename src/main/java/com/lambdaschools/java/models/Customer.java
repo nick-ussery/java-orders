@@ -1,9 +1,9 @@
-package assignment.orders.models;
+package com.lambdaschools.java.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import assignment.orders.models.Order;
+import com.lambdaschools.java.models.Order;
 
 @Entity
 @Table(name = "customers")

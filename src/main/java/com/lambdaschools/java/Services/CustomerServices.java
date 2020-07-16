@@ -1,6 +1,6 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
-import assignment.orders.models.Customer;
+import com.lambdaschools.java.models.Customer;
 
 import java.util.List;
 

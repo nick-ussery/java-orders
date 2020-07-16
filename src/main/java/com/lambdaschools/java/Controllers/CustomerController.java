@@ -1,7 +1,7 @@
-package assignment.orders.Controllers;
+package com.lambdaschools.java.Controllers;
 
-import assignment.orders.Services.CustomerServices;
-import assignment.orders.models.Customer;
+import com.lambdaschools.java.Services.CustomerServices;
+import com.lambdaschools.java.models.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "/customers")
+@RequestMapping("/customers")
 public class CustomerController
 {
     @Autowired
     private CustomerServices customerServices;
 
-    @GetMapping(name = "/", produces = {"application/json"})
-    public ResponseEntity<?>statusCheck()
-    {
-        return new ResponseEntity<>("Server is up", HttpStatus.OK);
-    }
 
-    @GetMapping(name = "/orders", produces = {"application/json"})
+    @GetMapping(value = "/", produces = {"application/json"})
     public ResponseEntity<?> listAllCustomers()
     {
         System.out.println("Find all Customers intiated");
@@ -34,14 +29,14 @@ public class CustomerController
         return new ResponseEntity<>(myList, HttpStatus.OK);
     }
 
-    @GetMapping(name = "/customer/{id}", produces = {"application/json"})
+    @GetMapping(value = "/customer/{id}", produces = {"application/json"})
     public ResponseEntity<?> findById(@PathVariable long id)
     {
         Customer c = customerServices.findById(id);
         return new ResponseEntity<>(c, HttpStatus.OK);
     }
 
-    @GetMapping(name = "/namelike/{subname}", produces = {"application/json"})
+    @GetMapping(value = "/namelike/{subname}", produces = {"application/json"})
     public ResponseEntity<?> findNameLike(@PathVariable String subname)
     {
         List<Customer> myList = customerServices.findNameLike(subname);

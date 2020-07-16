@@ -1,18 +1,18 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
-import assignment.orders.Views.OrderCounts;
+import com.lambdaschools.java.Views.OrderCounts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import assignment.orders.Repositories.OrdersRepository;
-import assignment.orders.models.Order;
+import com.lambdaschools.java.Repositories.OrdersRepository;
+import com.lambdaschools.java.models.Order;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Transactional
-@Service(value = "orderServices")
+@Service(value = "OrderServices")
 public class OrderServicesImpl implements OrderServices
 {
     @Autowired

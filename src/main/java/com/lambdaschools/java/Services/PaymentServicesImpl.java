@@ -1,11 +1,11 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
+import com.lambdaschools.java.Repositories.PaymentRepository;
+import com.lambdaschools.java.models.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import assignment.orders.Repositories.PaymentRepository;
-import assignment.orders.models.Payment;
 
 @Transactional
 @Service(value = "paymentServices")

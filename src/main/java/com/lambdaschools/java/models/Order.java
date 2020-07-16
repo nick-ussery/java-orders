@@ -1,4 +1,4 @@
-package assignment.orders.models;
+package com.lambdaschools.java.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -19,7 +19,7 @@ public class Order
 
 
     @ManyToOne()
-    @JoinColumn(name = "orderid")
+    @JoinColumn(name = "ordnum")
     private Customer customer;
     public Order() {
     }

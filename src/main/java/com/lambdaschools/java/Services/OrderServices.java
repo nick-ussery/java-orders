@@ -1,7 +1,7 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
-import assignment.orders.Views.OrderCounts;
-import assignment.orders.models.Order;
+import com.lambdaschools.java.Views.OrderCounts;
+import com.lambdaschools.java.models.Order;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package assignment.orders.Repositories;
+package com.lambdaschools.java.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import assignment.orders.models.Customer;
+import com.lambdaschools.java.models.Customer;
 
 import java.util.List;
 

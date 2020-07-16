@@ -1,4 +1,4 @@
-package assignment.orders.Views;
+package com.lambdaschools.java.Views;
 
 public interface OrderCounts {
     String getName();

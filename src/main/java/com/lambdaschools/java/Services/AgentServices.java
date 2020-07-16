@@ -1,6 +1,6 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
-import assignment.orders.models.Agent;
+import com.lambdaschools.java.models.Agent;
 
 public interface AgentServices {
     Agent save(Agent agent);

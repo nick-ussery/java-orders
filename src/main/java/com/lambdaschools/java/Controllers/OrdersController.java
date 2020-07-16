@@ -1,9 +1,9 @@
-package assignment.orders.Controllers;
+package com.lambdaschools.java.Controllers;
 
-import assignment.orders.Services.OrderServices;
-import assignment.orders.Views.OrderCounts;
-import assignment.orders.models.Customer;
-import assignment.orders.models.Order;
+import com.lambdaschools.java.Services.OrderServices;
+import com.lambdaschools.java.Views.OrderCounts;
+import com.lambdaschools.java.models.Customer;
+import com.lambdaschools.java.models.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name="/orders")
-public class OrderController
+@RequestMapping("/orders")
+public class OrdersController
 {
     @Autowired
     private OrderServices orderServices;
 
-    @GetMapping(name = "/order/{id}", produces = {"application/json"})
+    @GetMapping(value = "/order/{id}", produces = {"application/json"})
     public ResponseEntity<?> findOrderById(@PathVariable long id)
     {
         Order o = orderServices.findById(id);
         return new ResponseEntity<>(o, HttpStatus.OK);
     }
 
-    @GetMapping(name = "/count", produces = {"application/json"})
+    @GetMapping(value = "/count", produces = {"application/json"})
     public ResponseEntity<?> findOrderCounts()
     {
         List<OrderCounts> myList = orderServices.findOrderCount();

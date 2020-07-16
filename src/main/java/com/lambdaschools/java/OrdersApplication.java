@@ -1,4 +1,4 @@
-package com.lambdaschools.orders;
+package com.lambdaschools.java;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

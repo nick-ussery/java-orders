@@ -1,11 +1,11 @@
-package assignment.orders.Services;
+package com.lambdaschools.java.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import assignment.orders.Repositories.CustomerRepository;
-import assignment.orders.models.Customer;
+import com.lambdaschools.java.Repositories.CustomerRepository;
+import com.lambdaschools.java.models.Customer;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
